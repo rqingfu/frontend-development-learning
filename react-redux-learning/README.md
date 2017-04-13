@@ -11,7 +11,7 @@ import connect from './connect/connect'
 export { Provider, connectAdvanced, connect }
 ```
 ### Provider.js
-对于使用react-redux的app，一般都需要将将其作为root组件。Provider组件的关键点是利用react的[context](.,/react-learning/context.md)来给子组件提供store和storeSubscription。
+对于使用react-redux的app，一般都需要将将其作为root组件。Provider组件的关键点是利用react的[context](../react-learning/context.md)来给子组件提供store和storeSubscription。
 ```javascript
 import { Component, Children } from 'react'
 import PropTypes from 'prop-types'

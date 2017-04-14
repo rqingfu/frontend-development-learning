@@ -1,4 +1,4 @@
-# react context章节翻译
+# react context章节--翻译
 
 在使用react时，通过React组件追踪数据流是容易的。当你查看组件时，你可以知道那些props被传入，这可以方便的让你推断你的app。
 某些情况下，你想要在不通过手工一层层传递props的情况下在组件树中传递数据。在React中你可以使用强大的"context"api来直接这样做。

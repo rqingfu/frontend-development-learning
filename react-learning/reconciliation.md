@@ -124,12 +124,16 @@ React将会更改每个子节点而不是完整地保留&lt;li>Duke&lt;/li>和&l
 万不得已，你可以传递数组中数据的索引作为key。如果数组中的数据从不重组，这种方式的效率不错，但是重组将会变慢。
 
 ### 折衷
-It is important to remember that the reconciliation algorithm is an implementation detail. React could rerender the whole app on every action; the end result would be the same. We are regularly refining the heuristics in order to make common use cases faster.
 
-In the current implementation, you can express the fact that a subtree has been moved amongst its siblings, but you cannot tell that it has moved somewhere else. The algorithm will rerender that full subtree.
+重要的是要记住,reconciliation算法是一个实现细节。React可能重绘整个app；最后的结果可能是一样的。我们将定期改善启发法以便使常见案例更快。
 
-Because React relies on heuristics, if the assumptions behind them are not met, performance will suffer.
+在目前的实现中，你可以
 
-The algorithm will not try to match subtrees of different component types. If you see yourself alternating between two component types with very similar output, you may want to make it the same type. In practice, we haven't found this to be an issue.
+认为子树在其兄弟节点中已经被移动，但是你不能区分它已经移动什么地方。算法将重新渲染整个子树。
 
-Keys should be stable, predictable, and unique. Unstable keys (like those produced by Math.random()) will cause many component instances and DOM nodes to be unnecessarily recreated, which can cause performance degradation and lost state in child components.
+
+因为React依赖启发法，如果这些假设没有被使用，性能将会受到影响。
+
+1、算法不会尝试匹配不同组件类型的中的子树。如果你发现需要替换组件类型其组件的子组件一样，你可能需要使其具体相同的类型。在实际应用中，我们没有发现这是一个问题。
+
+2、Key应该是稳定的，可预测的和唯一的。不稳定的key(像通过Math.random()产生的key)将导致许多组件实例和DOM节点，这些节点很多都不会被再创建，这会引起性能下降和子组件state的丢失。

@@ -541,7 +541,8 @@ class LoggingButton extends React.Component {
 ## FORM
 React中的form和HTML中的form在用法上存在差异。
 ### 受控组件
-在HTML中，form元素，如<input>, <textarea>和<select>维护它们自己的状态和根据用户的输入作出更新。在React中，可变状态通常保存在组件的state中并只能通过setState更新。通过React来控制其值的form元素被称作“受控组件”。
+在HTML中，form元素，如\<input>, \<textarea>和\<select>维护它们自己的状态和根据用户的输入作出更新。在React中，可变状态通常保存在组件的state中并只能通过setState更新。通过React来控制其值的form元素被称作“受控组件”。
+
 ```
 class NameForm extends React.Component {
   constructor(props) {
@@ -574,6 +575,7 @@ class NameForm extends React.Component {
   }
 }
 ```
+
 ## 参考链接
 - [React官方文档](https://facebook.github.io/react/docs/hello-world.html)
 - [React 入门实例教程](http://www.ruanyifeng.com/blog/2015/03/react.html)

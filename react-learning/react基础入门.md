@@ -1,16 +1,16 @@
 # React基础入门
 
-React是用于构建用户交互界面的js库, 围绕React有很丰富的生态。通常React和react-router, redux, webpack, es6等结合起来开发应用。React具有如下特点:
+React是用于构建用户交互界面的js库, 围绕React有很丰富的生态。通常React和react-router, redux, webpack, es6等结合起来开发应用。React具有如下特点:
 
 - 描述式的
 
-    React让创建交互界面变得轻松。React是数据驱动的视图，每次(状态)的数据的改变, React都会高效的更新和渲染每个组件。这种数据驱动的方式使代码可预测，容易理解和调试。
+    React让创建交互界面变得轻松。React是数据驱动的视图，每次(状态)的数据的改变, React都会高效的更新和渲染每个组件。这种数据驱动的方式使代码可预测，容易理解和调试。
 
-- 基于组件的
+- 基于组件的
 
-    React构建封闭的组建来管理其状态，从而构建更复杂的逻辑。React由于使用组件而不是模版，从而可以传递根据丰富的数据格式和不需要把需要维护的状态绑定到dom。此外，也可以实现代码的复用。
+    React构建封闭的组建来管理其状态，从而构建更复杂的逻辑。React由于使用组件而不是模版，从而可以传递根据丰富的数据格式和不需要把需要维护的状态绑定到dom。此外，也可以实现代码的复用。
 
-- learn once, write anywhere
+- learn once, write anywhere
 
 ## 安装
 ### cnpm
@@ -23,14 +23,11 @@ npm install -g cnpm --registry=https://registry.npm.taobao.org
 alias cnpm="npm --registry=https://registry.npm.taobao.org --cache=$HOME/.npm/.cache/cnpm --disturl=https://npm.taobao.org/dist --userconfig=$HOME/.cnpmrc"
 
 # Or alias it in .bashrc or .zshrc
-$ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taobao.org \
-  --cache=$HOME/.npm/.cache/cnpm \
-  --disturl=https://npm.taobao.org/dist \
-  --userconfig=$HOME/.cnpmrc"' >> ~/.zshrc && source ~/.zshrc
+$ echo '\n#alias for cnpm\nalias cnpm="npm --registry=https://registry.npm.taobao.org --cache=$HOME/.npm/.cache/cnpm --disturl=https://npm.taobao.org/dist --userconfig=$HOME/.cnpmrc"' >> ~/.zshrc && source ~/.zshrc
 ```
 
 ### 创建一个新的React App:
-#### 使用create-react-app构建
+#### 使用create-react-app构建
 ```
 cnpm install -g create-react-app
 create-react-app my-app
@@ -47,7 +44,7 @@ mkdir react-demo
 cd react-demo
 npm init
 ```
-react目录结构
+react目录结构
 (假设当前路径为～/local-repertory/react-dom)
 ```
 - - src
@@ -61,7 +58,7 @@ npm init
 -webpack.config.js
 ```
 编辑package.json文件:
-(涉及依赖包及运行脚本部分)
+(涉及依赖包及运行脚本部分)
 ```
 {
   "name": "react-demo",
@@ -101,7 +98,7 @@ npm init
   }
 }
 ```
-安装必要的包
+安装必要的包
 ```
 cnpm install
 ```
@@ -172,9 +169,10 @@ class HelloWorld extends Component {
 
 export default HelloWorld;
 ```
-向模版中root元素写入<div>Hello, world</div>。这里涉及到react的特殊语法:<div>hello, world</div>, 即好像在js中写html。下面讲一下JSX。
+向模版中root元素写入\<div>Hello, world\</div>。这里涉及到react的特殊语法:\<div>hello, world\</div>, 即好像在js中写html。下面讲一下JSX。
+
 ## JSX
-JSX本质上既不是字符串也不是html，是对js语法的一个扩展。React推荐使用JSX来描述UI的长相，JSX和模版语言也不同，它可以充分的利用js能力。jsx本质上产生React“元素”，然后在该“元素”映射到展示的DOM元素上（React完成，无需我们惯性）。
+JSX本质上既不是字符串也不是html，是对js语法的一个扩展。React推荐使用JSX来描述UI的长相，JSX和模版语言也不同，它可以充分的利用js能力。jsx本质上产生React“元素”，然后在该“元素”映射到展示的DOM元素上（React完成，无需我们惯性）。
 关于JSX需要掌握的一些知识点:
 ### JSX中内嵌表达式
 JSX允许在其中嵌入js表达式，该表达需要在大括号({})中。如：
@@ -341,7 +339,7 @@ ReactDOM.render(
 ### prop是只读的, 不能修改
 React足够灵活但有一条严格的规则：
 **所以React组件必须相对于它们的props看起来像纯函数。**
-## state & 生命周期方法
+## state & 生命周期方法
 ### state
 state用来维护组件的状态，同时随着state的变化来更新组件相应的UI。可以将组件看成是一个状态机，刚开有一个初始状态，随着交互或时间的推移，组件state在变化，和state相关的UI也自动更新。
 #### state的正确使用姿势
@@ -376,7 +374,7 @@ this.setState(function(prevState, props) {
 ```
 - state以合并的方式更新
 当调用setState时，React会把你提供的对象合并到当前的state中，但这中合并时浅层次的合并。
-### 生命周期方法
+### 生命周期方法
 React为组件提供了如下生命周期方法：
 当组件实例（React元素）被创建并插入DOM根节点时，如下生命周期方法将被调用：
 ```

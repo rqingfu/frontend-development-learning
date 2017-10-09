@@ -577,3 +577,4 @@ class NameForm extends React.Component {
 ## 参考链接
 - [React官方文档](https://facebook.github.io/react/docs/hello-world.html)
 - [React 入门实例教程](http://www.ruanyifeng.com/blog/2015/03/react.html)
+- [webpack配置文档](https://webpack.js.org/concepts/)
